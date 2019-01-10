@@ -1,0 +1,146 @@
+<section class="landing-wrap">
+  <div class="landing-desc">
+    <div class="container">
+      <a href="landing.html" class="logo">
+        <img src="../../assets/../../assets/images/logo-white.png" />
+      </a>
+      <div class="drink-wrap">
+        <h1>Thirsty?</h1>
+        <h2>Find the drink you're looking for.</h2>
+        <p>
+          <a (click)="onSerchByChange()" class="toggle-drink swap-toggle">
+            <img *ngIf="searchBy === 'store'" src="../../assets/images/toggle1.png" />
+            <img *ngIf="searchBy === 'drink'" src="../../assets/images/toggle2.png" />
+          </a>
+        </p>
+        <div id="custom-search-input">
+          <div class="input-group col-md-12">
+            <span class="input-group-btn btn-left">
+              <button class="btn search-icon" type="button">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </span>
+            <input type="text" [(ngModel)]="searchText" (keyup)="isSearchClicked = false" class="form-control input-lg" [placeholder]='placeholderText' />
+            <span class="input-group-btn btn-search-wrap">
+              <button class="btn btn-search btn-lg" type="button" (click)="filterBySearchText()">
+                Search
+              </button>
+            </span>
+          </div>
+        </div>
+        <div class="store-picker-container" *ngIf="isSearchClicked">
+          <div class="store-tile-container" *ngFor="let store of stores">
+              <div class="store-thumbnail" *ngIf="false">
+                <img [src]="store?.StoreImage" height="75px" width="75px">
+              </div>
+              <h3>{{store?.StoreName}} <span *ngIf="store?.Location"> - {{store?.Location}} </span></h3>
+              <div class="store-info">
+                  <div class="store-details">
+                      
+                      <small class="text-muted">{{store?.Address1}}, 
+                        <span *ngIf="store?.Address2"> {{store.Address2}},</span>
+                        <span *ngIf="store?.City"> {{store.City}},</span>
+                        <span *ngIf="store?.State"> {{store.State}}</span>
+                        <span *ngIf="store?.Zip"> {{store.Zip}}</span>
+                      </small> <br>
+                      <small class="text-muted">
+                        <i class="icon icon-footer-contact"></i> 
+                        <span> <a href="tel:{{store?.ContactNo}}">Call: {{store?.ContactNo}}</a></span>
+                      </small>
+                  </div>
+                  <div class="store-distance-info">
+                      <div class="store-distance" *ngIf="false">
+                          <i class="icon icon-location-picker"></i> 0.1 mi
+                      </div>
+                      <div class="select-store">
+                          <button class="btn btn-default active" data-dismiss="modal" (click)="onStoreSelect(store.StoreId)">Select Store</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="liquor-store-list">
+  <div class="container container-cust">
+    <h3 class="lq-head">
+      Order pickup or delivery from <br /> your liquor store
+    </h3>
+    <div class="row">
+      <div class="col-sm-12">
+        <ul class="flex-list">
+          <li *ngFor="let city of topCities | slice:0:6; let i = index;">
+            <div class="lq-overlay"></div>
+            <img src="../../assets/images/p{{i+1}}.png" class="lq-shop">
+            <h3>{{city}}</h3>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+    <h3 class="lq-head">
+      Own a LIQUOR Store ?
+    </h3>
+    <p class="lq-p">Help thirsty people discover you through Bottlecapps</p>
+    <a href="javascript:void(0)" class="btn btn-learn">
+      Learn More
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <ul class="footer-list">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">About Bottlecapps</a>
+        </li>
+        <li>
+          <a href="#">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#">Terms of services</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p class="copyright">
+        © 2018 <span>Bottlecapps.</span> Made with <img src="../../assets/images/heart.svg" class="heart">. All Rights Reserved
+      </p>
+      <ul class="social-list">
+        <li>
+          <a href="#">
+            <img src="../../assets/images/facebook.svg" class="social-icon">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../../assets/images/twitter.svg" class="social-icon">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../../assets/images/linkedin.svg" class="social-icon">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../../assets/images/youtube.svg" class="social-icon">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../../assets/images/Insta.svg" class="social-icon">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>

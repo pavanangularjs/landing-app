@@ -1,0 +1,244 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  height: 100%;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+}
+a,a:hover,a:focus {
+  text-decoration: none;
+  outline: none;
+  outline: 0;
+  outline-offset: unset;
+}
+
+.landing-wrap{
+  background-image: url("../src/assets/images/hero.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  min-height: 100vh;
+  z-index: 2;
+}
+
+.landing-desc{z-index: 9; position: relative;}
+.logo{
+  margin-top: 20px;
+  display: block;
+}
+.logo{
+  width: 270px;
+}
+.logo img{
+  max-width: 100%;
+  width: 100%;
+}
+.drink-wrap{
+  padding-top: 150px;
+  margin: 0 60px;
+  text-align: center;
+}
+.drink-wrap h1{
+  color: #fff;
+  font-weight: 900;
+  margin:0px 0px 15px;
+}
+.drink-wrap h2{
+  color: #fff;
+  font-weight: 900;
+  margin:0px 0px 35px;
+}
+.toggle-drink{
+  display: block;
+  margin:15px auto;
+}
+.toggle1-img,.swap-toggle .toggle2-img{
+  display: block;margin: 0 auto;
+}
+.toggle2-img,.swap-toggle .toggle1-img{
+  display: none;margin: 0 auto;
+}
+#custom-search-input{
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+    padding: 12px;
+    height: 75px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.btn-search {
+    background: rgba(235,28,45,1);
+    margin: 12px;
+    padding: 12px;
+    border-radius: 6px !important;
+    color: #fff;
+    font-weight: 900;
+    transition: all 0.3s ease;
+}
+.btn-search:hover,.btn-search:focus{
+  background: rgba(235,28,45,0.8);
+  color: #fff;
+}
+#custom-search-input .glyphicon-search{
+    font-size: 20px;
+}
+.search-icon{background-color: transparent;border:0px;}
+
+
+/*Liquor*/
+.liquor-store-list{
+  padding:60px 0px;
+  background-color: #fff;
+  text-align: center;
+  margin:0 auto;
+}
+
+.lq-head{
+  margin-bottom: 5px;
+  color: #383838;
+  font-weight: 700;
+  text-align: center;
+}
+
+.flex-list{
+      display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+    padding:0px;
+    margin-top:50px;
+    margin-bottom: 80px;
+}
+
+.flex-list li {
+    /* flex: 1 1 auto; */
+    transition: all 0.35s ease;
+    margin: 5px 15px;
+    width:270px;
+    height: 270px;
+    position: relative;
+}
+.flex-list li h3{
+  color: #fff;
+  font-weight: 700;
+  position: absolute;
+  left:0;right: 0;top:50%;
+  text-align: center;
+  margin:0px;
+}
+.lq-shop{
+  display: block;
+  width:270px;
+    height: 270px;
+}
+.lq-overlay{
+  background: rgba(0,0,0,0.4);
+  position: absolute;
+  height: 100%;width: 100%;
+  left: 0;top: 0;bottom: 0;right: 0;
+  opacity: 1;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.lq-p{
+  color: #191919;font-size: 14px;font-weight: 700;
+}
+.btn-learn {
+    background: rgba(235,28,45,1);
+    padding: 15px 35px;
+    border-radius: 6px !important;
+    color: #fff;
+    font-size: 18px;
+    margin-top:45px;
+    font-weight: 900;
+    transition: all 0.3s ease;
+}
+.btn-learn:hover,.btn-learn:focus{
+  background: rgba(235,28,45,0.8);
+  color: #fff;
+}
+
+
+/*Footer*/
+.footer-top{
+  margin-top:50px;
+  padding-bottom:35px;
+  border-bottom: 1px solid #E5E5E5;
+  margin-bottom:30px;
+  text-align: center;
+}
+.footer-list{
+  list-style-type: none;
+  padding:0px;
+}
+.footer-list li{
+  display: inline-block;
+  margin:0px 25px;
+}
+.footer-list li a{
+ color: #333;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 800;
+  transition: all 0.3s ease;
+}
+.footer-list li a:hover{
+  color: #EB1C2D;
+}
+.copyright{
+  color: #999999;
+  font-size: 13px;
+  font-weight:700;
+  text-align: center;
+}
+.copyright span{
+  color: #EA0B10;
+}
+.copyright .heart{
+  color: #ED4145;
+}
+.social-list{
+  list-style-type: none;
+  padding:0px;
+  margin:30px auto;
+  text-align: center;
+}
+.social-list li{
+  display: inline-block;
+  margin:0px 10px;
+}
+.social-list li a{
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 800;
+  transition: all 0.3s ease;
+}
+.social-list li a .social-icon{
+  transition: all 0.3s ease;
+}
+.social-list li a:hover .social-icon{
+  opacity: 0.9;
+}
+
+
+
+@media (min-width: 1200px){
+  .container-cust{
+    width: 1000px;
+  }
+}
