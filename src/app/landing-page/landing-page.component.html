@@ -20,7 +20,7 @@
                 <i class="glyphicon glyphicon-search"></i>
               </button>
             </span>
-            <input type="text" [(ngModel)]="searchText" (keyup)="isSearchClicked = false" class="form-control input-lg" [placeholder]='placeholderText' />
+            <input type="text" [(ngModel)]="searchText" (keyup)="isSearchClicked = false" (keyup.enter)="filterBySearchText()" class="form-control input-lg" [placeholder]='placeholderText' />
             <span class="input-group-btn btn-search-wrap">
               <button class="btn btn-search btn-lg" type="button" (click)="filterBySearchText()">
                 Search

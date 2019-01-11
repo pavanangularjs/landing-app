@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { LandingPageComponent } from '../app/landing-page/landing-page.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: LandingPageComponent},
+  { path: '', redirectTo: '/landing', pathMatch: 'full' },
+  { path: 'landing', component: LandingPageComponent},
   { path: '**', component: LandingPageComponent }
 ];
 

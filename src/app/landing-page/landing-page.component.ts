@@ -88,4 +88,8 @@ export class LandingPageComponent implements OnInit {
     this.topCities = this.stores.map(item => item.City)
     .filter((value, index, self) => self.indexOf(value) === index);
   }
+
+  onStoreSelect(storeId) {
+    window.open('http://localhost:4200/#/home/?storeID=' + storeId);
+  }
 }
